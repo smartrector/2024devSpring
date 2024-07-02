@@ -12,3 +12,13 @@ jobs:
     steps:
       - name: hello world
         run: echo "hello world"
+
+      - name: 여러명령어 작성하기
+        run: |
+          echo "good"
+          echo "morning"
+
+      - name: github actions
+        run: |
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
