@@ -1,0 +1,14 @@
+name: github actions
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  My-Deply-Job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: hello world
+        run: echo "hello world"
