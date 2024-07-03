@@ -19,3 +19,4 @@ jobs:
           script: |
             cd /home/2024devSpring
             git config --global --add safe.directory /home/2024devSpring
+            git pull origin main
