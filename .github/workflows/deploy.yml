@@ -19,4 +19,7 @@ jobs:
           script: |
             cd /home/2024devSpring
             git config --global --add safe.directory /home/2024devSpring
-            pwd
+            git pull origin main
+            ./gradlew clean build
+            sudo fuser -k -n tcp 8080 || true
+            nohup java -jar build/libs/*SNAPSHOT.jar > ./output.log 2>&1 &
