@@ -19,6 +19,7 @@ jobs:
           script: |
             cd /home/2024devSpring
             git config --global --add safe.directory /home/2024devSpring
+            chmod -R u+rwx /home/2024devSpring/.git
             git pull origin main
             ./gradlew clean build
             sudo fuser -k -n tcp 8080 || true
