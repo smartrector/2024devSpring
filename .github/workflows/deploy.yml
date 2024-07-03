@@ -11,10 +11,6 @@ jobs:
     steps:
       - name: SSH로 EC2에 접속하기
         uses: appleboy/ssh-action@v1.0.3
-
-      - name: Add safe directory configuration
-        run: git config --global --add safe.directory /home/2024devSpring
-
         with:
           host: ${{ secrets.EC2_HOST }} # EC2의 주소
           username: ${{ secrets.EC2_USERNAME }} # EC2 접속 username
